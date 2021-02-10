@@ -1,0 +1,58 @@
+{
+  "name": "starmap",
+  "version": "1.0.0",
+  "description": "A simple template for React Apps",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "dev": "nodemon index --watch index",
+    "start": "npm run build && NODE_ENV=production node index",
+    "test": "jest --no-cache",
+    "cover": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "Anthony Valera",
+  "license": "ISC",
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/fileMock.js",
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "html-webpack-plugin": "^5.0.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "react-refresh": "^0.9.0",
+    "react-test-renderer": "^17.0.1",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-middleware": "^4.1.0",
+    "webpack-hot-middleware": "^2.25.0"
+  }
+}
